@@ -9,7 +9,10 @@ cabal-build: install
 test: cabal-build
 	cabal test
 
-dist: cabal-build
+haddock: cabal-build
+	cabal haddock
+
+dist: cabal-build haddock
 	cabal sdist
 
 build: test dist
