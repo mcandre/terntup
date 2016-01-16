@@ -35,12 +35,3 @@ Test-suite reference
     test-framework-quickcheck2,
     HUnit,
     QuickCheck
-
-executable helloterntup
-  build-depends:
-    base >= 4.3.1.0 && < 5,
-    parallel
-
-  main-is: HelloTerntUp.hs
-  hs-source-dirs: src
-  ghc-options: -Wall
