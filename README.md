@@ -10,43 +10,43 @@ There is no official standard for representing the digits `(0, 1-1)` in balanced
 
 ```
 $ ghci
-Prelude> :set -package terntup
-Prelude> :m +TerntUp
-Prelude TerntUp> terntUp 0
+> :set -package terntup
+> :m +TerntUp
+> terntUp 0
 "0"
-Prelude TerntUp> terntDown "0"
+> terntDown "0"
 0
-Prelude TerntUp> terntUp 1
+> terntUp 1
 "1"
-Prelude TerntUp> terntDown "1"
+> terntDown "1"
 1
-Prelude TerntUp> terntUp (-1)
+> terntUp (-1)
 "T"
-Prelude TerntUp> terntDown "T"
+> terntDown "T"
 -1
-Prelude TerntUp> terntUp 2
+> terntUp 2
 "1T"
-Prelude TerntUp> terntDown "1T"
+> terntDown "1T"
 2
-Prelude TerntUp> terntUp (-2)
+> terntUp (-2)
 "T1"
-Prelude TerntUp> terntDown "T1"
+> terntDown "T1"
 -2
-Prelude TerntUp> terntUp 3
+> terntUp 3
 "10"
-Prelude TerntUp> terntDown "10"
+> terntDown "10"
 3
-Prelude TerntUp> terntUp 99
+> terntUp 99
 "11T00"
-Prelude TerntUp> terntDown "11T00"
+> terntDown "11T00"
 99
-Prelude TerntUp> terntUp (-55536)
+> terntUp (-55536)
 "T01TTT11010"
-Prelude TerntUp> terntDown "T01TTT11010"
+> terntDown "T01TTT11010"
 -55536
-Prelude TerntUp> terntDown "t01ttt11010"
+> terntDown "t01ttt11010"
 -55536
-Prelude TerntUp> terntDown "-0+---++0+0"
+> terntDown "-0+---++0+0"
 -55536
 ```
 
