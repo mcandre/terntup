@@ -50,6 +50,10 @@ $ ghci
 -55536
 ```
 
+# REQUIREMENTS
+
+* [Haskell](https://www.haskell.org/) 7+
+
 # INSTALL
 
 ```
