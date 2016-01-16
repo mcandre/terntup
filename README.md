@@ -4,7 +4,7 @@
 
 terntup converts numbers from decimal to [balanced ternary](https://en.wikipedia.org/wiki/Balanced_ternary), a base 3 number system that represents negative numbers with digits rather than a sign for the entire number; and represents all integers as a sum of positive and/or negative powers of 3.
 
-There is no official standard for representing the digits `(0, 1-1)` in balanced ternary. Common styles include `(0, 1, T)` or `(0, +, -)`.
+There is no official standard for representing the digits `(0, 1-1)` in balanced ternary. Common styles include `(0, 1, T)` or `(0, +, -)`. For example, `99 = 1*3^4 + 1*3^3 - 1*3^2 + 0*3^1 + 0*3^0 = 11T00` in balanced ternary.
 
 # EXAMPLE
 
