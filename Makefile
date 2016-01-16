@@ -1,4 +1,4 @@
-all: test
+all: test dist
 
 install:
 	cabal install
