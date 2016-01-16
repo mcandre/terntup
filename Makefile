@@ -1,16 +1,18 @@
-all: test dist
+all: build
 
 install:
 	cabal install
 
-build: install
+cabal-build: install
 	cabal build
 
-test: build
+test: cabal-build
 	cabal test
 
-dist: build
+dist: cabal-build
 	cabal sdist
+
+build: test dist
 
 hlint:
 	hlint .

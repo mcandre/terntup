@@ -56,8 +56,8 @@ $ ghci
 cabal install terntup
 ```
 
-# TEST
+# BUILD
 
 ```
-$ make test
+$ make build
 ```
