@@ -17,6 +17,9 @@ dist: cabal-build haddock
 
 build: test dist
 
+publish: build
+	cabal upload dist/terntup-*.tar.gz
+
 hlint:
 	hlint .
 

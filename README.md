@@ -50,6 +50,10 @@ $ ghci
 -55536
 ```
 
+# HACKAGE
+
+https://hackage.haskell.org/package/terntup
+
 # REQUIREMENTS
 
 * [Haskell](https://www.haskell.org/) 7+
