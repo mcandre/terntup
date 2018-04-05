@@ -76,7 +76,8 @@ $ cabal install terntup
 # BUILD
 
 ```console
-$ cabal install --only-dependencies --enable-tests --enable-documentation
+$ cabal install --only-dependencies --enable-documentation
+$ cabal install --only-dependencies --enable-tests
 $ shake
 ```
 
