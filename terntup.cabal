@@ -16,21 +16,25 @@ source-repository head
 
 library
   build-depends:
-    base              >= 4.3.1.0 && <5
+    base              >= 4.6.0.1 && < 5
 
   exposed-modules: TerntUp
 
-  ghc-options: -Wall
+  ghc-options: -O2 -Wall -fwarn-tabs
   hs-source-dirs: src
 
-Test-suite reference
-  Hs-Source-Dirs:     testsuite/tests, testsuite, src, .
-  Main-Is:            testsuite/TestRunner.hs
-  Type:               exitcode-stdio-1.0
-  Build-Depends:
-    base              >= 4.3.1.0 && <5,
+test-suite reference
+  build-depends:
+    base              >= 4.3.1.0 && < 5,
     test-framework,
     test-framework-hunit,
     test-framework-quickcheck2,
     HUnit,
     QuickCheck
+
+  other-modules: TerntUp, TerntUpTest
+
+  ghc-options:        -O2 -Wall -fwarn-tabs
+  hs-source-dirs:     testsuite/tests, testsuite, src, .
+  main-is:            testsuite/TestRunner.hs
+  type:               exitcode-stdio-1.0

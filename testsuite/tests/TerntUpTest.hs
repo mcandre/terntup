@@ -13,10 +13,7 @@ module TerntUpTest (
 
 import TerntUp
 
-import Test.Framework.Providers.HUnit
-import Test.Framework.Providers.QuickCheck2
 import Test.HUnit
-import Test.QuickCheck
 
 testZeroUp :: Assertion
 testZeroUp = terntUp 0 @?= "0"

@@ -5,8 +5,6 @@ import TerntUpTest
 import Test.Framework.Runners.Console
 import Test.Framework.Providers.HUnit
 import Test.Framework.Providers.QuickCheck2
-import Test.HUnit
-import Test.QuickCheck
 
 main :: IO ()
 main = defaultMainWithOpts [

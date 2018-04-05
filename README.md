@@ -8,7 +8,7 @@ There is no official standard for representing the digits `(0, 1-1)` in balanced
 
 # EXAMPLE
 
-```
+```console
 $ ghci
 > :set -package terntup
 > :m +TerntUp
@@ -50,22 +50,44 @@ $ ghci
 -55536
 ```
 
-# HACKAGE
+# DOCUMENTATION
 
 https://hackage.haskell.org/package/terntup
 
-# REQUIREMENTS
+# RUNTIME REQUIREMENTS
 
-* [Haskell](https://www.haskell.org/) 7+
+* [GHC Haskell](http://www.haskell.org/) 8+
+
+# BUILDTIME REQUIREMENTS
+
+* [GHC Haskell](http://www.haskell.org/) 8+
+
+## Recommended
+
+* [shake](https://shakebuild.com/) (e.g., `cabal install shake`)
+* [hlint](https://hackage.haskell.org/package/hlint) (e.g., `cabal install happy; cabal install hlint`)
 
 # INSTALL
 
-```
-cabal install terntup
+```console
+$ cabal install terntup
 ```
 
 # BUILD
 
 ```
-$ make build
+$ cabal install --only-dependencies --enable-tests
+$ shake
+```
+
+# LINT
+
+```console
+$ shake lint
+```
+
+# TEST
+
+```console
+$ shake test
 ```
