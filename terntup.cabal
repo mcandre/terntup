@@ -20,7 +20,7 @@ library
 
   exposed-modules: TerntUp
 
-  ghc-options: -O2 -Wall -fwarn-tabs
+  ghc-options: -Wall -fwarn-tabs
   hs-source-dirs: src
 
 test-suite reference
@@ -34,7 +34,7 @@ test-suite reference
 
   other-modules: TerntUp, TerntUpTest
 
-  ghc-options:        -O2 -Wall -fwarn-tabs
+  ghc-options:        -Wall -fwarn-tabs
   hs-source-dirs:     testsuite/tests, testsuite, src, .
   main-is:            testsuite/TestRunner.hs
   type:               exitcode-stdio-1.0

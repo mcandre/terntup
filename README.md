@@ -54,6 +54,12 @@ $ ghci
 
 https://hackage.haskell.org/package/terntup
 
+# INSTALL (HACKAGE)
+
+```console
+$ cabal install terntup
+```
+
 # RUNTIME REQUIREMENTS
 
 * [GHC Haskell](http://www.haskell.org/) 8+
@@ -67,17 +73,23 @@ https://hackage.haskell.org/package/terntup
 * [shake](https://shakebuild.com/) (e.g., `cabal install shake`)
 * [hlint](https://hackage.haskell.org/package/hlint) (e.g., `cabal install happy; cabal install hlint`)
 
-# INSTALL
-
-```console
-$ cabal install terntup
-```
-
 # BUILD
 
-```
-$ cabal install --only-dependencies --enable-tests
+```console
+$ cabal install --only-dependencies --enable-tests --enable-documentation
 $ shake
+```
+
+# INSTALL (LOCAL REPOSITORY)
+
+```console
+$ shake install
+```
+
+# UNINSTALL
+
+```console
+$ shake uninstall
 ```
 
 # LINT
@@ -90,4 +102,10 @@ $ shake lint
 
 ```console
 $ shake test
+```
+
+# PUBLISH
+
+```console
+$ shake publish
 ```

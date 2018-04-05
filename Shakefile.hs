@@ -3,34 +3,42 @@ import Development.Shake.FilePath
 import System.Directory as Dir
 
 main :: IO ()
-main = shakeArgs shakeOptions{ shakeFiles="dist" } $ do
-  want ["test"]
+main = do
+  let tarball = "dist/terntup-0.0.1.tar.gz"
+  shakeArgs shakeOptions{ shakeFiles="dist" } $ do
+    want ["test"]
 
-  phony "hlint" $
-    cmd_ "hlint" "."
+    phony "hlint" $
+      cmd_ "hlint" "."
 
-  phony "lint" $
-    need ["hlint"]
+    phony "lint" $
+      need ["hlint"]
 
-  phony "test" $
-    cmd_ "cabal" "test"
+    phony "test" $
+      cmd_ "cabal" "test"
 
-  phony "build" $
-    cmd_ "cabal" "build"
+    phony "install" $
+      cmd_ "cabal" "install"
 
-  phony "haddock" $
-    cmd_ "cabal" "haddock"
+    phony "uninstall" $
+      cmd_ "ghc-pkg" "unregister" "--force" "terntup"
 
-  "dist/terntup-0.0.1.tar.gz" %> \_ -> do
-    need ["build", "haddock"]
-    cmd_ "cabal" "sdist"
+    phony "build" $
+      cmd_ "cabal" "build"
 
-  phony "sdist" $ do
-    need ["dist/terntup-0.0.1.tar.gz"]
+    phony "haddock" $
+      cmd_ "cabal" "haddock"
 
-  phony "publish" $ do
-    need ["sdist"]
-    cmd_ "cabal" "upload" "dist/terntup-0.0.1.tar.gz"
+    tarball %> \_ -> do
+      need ["build", "haddock"]
+      cmd_ "cabal" "sdist"
 
-  phony "clean" $
-    cmd_ "cabal" "clean"
+    phony "sdist" $ do
+      need [tarball]
+
+    phony "publish" $ do
+      need ["sdist"]
+      cmd_ "cabal" "upload" tarball
+
+    phony "clean" $
+      cmd_ "cabal" "clean"
