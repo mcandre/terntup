@@ -1,15 +1,15 @@
 module TerntUpTest (
-  testZeroUp,
-  testZeroDown,
-  testOneUp,
-  testOneDown,
-  testNegOneDown,
-  testTwoDown,
-  testNegTwoDown,
-  testNeg55536Up,
-  testNeg55536Down,
-  propReversible
-  ) where
+    testZeroUp,
+    testZeroDown,
+    testOneUp,
+    testOneDown,
+    testNegOneDown,
+    testTwoDown,
+    testNegTwoDown,
+    testNeg55536Up,
+    testNeg55536Down,
+    propReversible
+    ) where
 
 import TerntUp
 
